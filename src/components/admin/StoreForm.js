@@ -19,6 +19,7 @@ const StoreForm = ({ store, onClose }) => {
     freeShipping: store?.freeShipping || false, // New field
     memberDiscount: store?.memberDiscount || false, // New field
     militaryDiscount: store?.militaryDiscount || false, // New field
+    isTrending: store?.isTrending || false,
   });
 
   const [newCoupon, setNewCoupon] = useState({
@@ -100,58 +101,60 @@ const StoreForm = ({ store, onClose }) => {
   // };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    // Basic validation for required fields
-    if (!formData.name || !formData.url) {
-      alert("Name and URL are required.");
-      return;
-    }
+  // Basic validation for required fields
+  if (!formData.name || !formData.url) {
+    alert("Name and URL are required.");
+    return;
+  }
 
-    // Filter out incomplete coupons in create mode
-    const filteredCoupons = isEditMode
-      ? formData.coupons
-      : formData.coupons.filter(
-          (coupon) => coupon.code && coupon.discount && coupon.discountType
-        );
+  // Filter out incomplete coupons in create mode
+  const filteredCoupons = isEditMode
+    ? formData.coupons
+    : formData.coupons.filter(
+        (coupon) => coupon.code && coupon.discount && coupon.discountType
+      );
 
-    const updatedFormData = {
-      ...formData,
-      coupons: filteredCoupons,
-      tags: formData.tags.split(",").map((tag) => tag.trim()),
-    };
-
-    const method = store ? "PUT" : "POST";
-    const url = store
-      ? `${process.env.REACT_APP_API_BASE_URL}/api/stores/id/${store._id}`
-      : `${process.env.REACT_APP_API_BASE_URL}/api/stores`;
-
-    try {
-      const token = localStorage.getItem("token");
-
-      const response = await fetch(url, {
-        method,
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(updatedFormData),
-      });
-
-      if (response.ok) {
-        alert(`${store ? "Store updated" : "Store created"} successfully!`);
-        onClose(); // Close the form on success
-      } else {
-        const errorData = await response.json();
-        console.error("Failed to save store:", errorData);
-        alert(`Error: ${errorData.message || "Failed to save store"}`);
-      }
-    } catch (error) {
-      console.error("Error saving store:", error);
-      alert("An unexpected error occurred while saving the store.");
-    }
+  const updatedFormData = {
+    ...formData,
+    coupons: filteredCoupons,
+    tags: formData.tags.split(",").map((tag) => tag.trim()),
   };
+
+  console.log("Updated Form Data (Before Submit):", updatedFormData); // Debugging line
+
+  const method = store ? "PUT" : "POST";
+  const url = store
+    ? `${process.env.REACT_APP_API_BASE_URL}/api/stores/id/${store._id}`
+    : `${process.env.REACT_APP_API_BASE_URL}/api/stores`;
+
+  try {
+    const token = localStorage.getItem("token");
+
+    const response = await fetch(url, {
+      method,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(updatedFormData),
+    });
+
+    if (response.ok) {
+      alert(`${store ? "Store updated" : "Store created"} successfully!`);
+      onClose(); // Close the form on success
+    } else {
+      const errorData = await response.json();
+      console.error("Failed to save store:", errorData);
+      alert(`Error: ${errorData.message || "Failed to save store"}`);
+    }
+  } catch (error) {
+    console.error("Error saving store:", error);
+    alert("An unexpected error occurred while saving the store.");
+  }
+};
 
   return (
     <div className="store-form">
@@ -346,6 +349,21 @@ const StoreForm = ({ store, onClose }) => {
           />
           Free Shipping
         </label>
+        <label>
+          <input
+            type="checkbox"
+            name="isTrending"
+            checked={formData.isTrending}
+            onChange={(e) =>
+              setFormData((prev) => ({
+                ...prev,
+                isTrending: e.target.checked,
+              }))
+            }
+          />
+          is Trending
+        </label>
+
         <label>
           <input
             type="checkbox"

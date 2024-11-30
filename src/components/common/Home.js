@@ -3,6 +3,8 @@ import "./Home.css";
 import { FiSearch } from "react-icons/fi";
 import CouponPage from "./CouponPage";
 import HeroSuggestions from "./heroSuggestion";
+import HomeAbout from "./HomeAbout";
+import TrendingCoupons from "../common/TrendingCoupons"; 
 
 const Home = () => {
   const [stores, setStores] = useState([]);
@@ -91,7 +93,10 @@ const Home = () => {
           />
         </div>
       </div>
+      {/* Add TrendingCoupons here */}
+      <TrendingCoupons />
       <CouponPage />
+      <HomeAbout />
     </>
   );
 };

@@ -1,0 +1,96 @@
+.home-about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .home-about-content {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .home-about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-about-image img {
+    height: 80%;
+    width: auto;
+    border-radius: 10px;
+  }
+  
+  .home-about-text {
+    flex: 2;
+    color: #333;
+  }
+  
+  .home-about-text h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  .home-about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .home-about-container {
+      padding: 15px;
+    }
+  
+    .home-about-content {
+      flex-direction: column; /* Stack items vertically */
+      gap: 15px;
+    }
+  
+    .home-about-image {
+      flex: 0 0 100%; /* Make image take full width */
+      justify-content: flex-start;
+    }
+  
+    .home-about-image img {
+      width: 100%; /* Ensure image fills the container */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .home-about-text {
+      flex: 0 0 100%; /* Text takes full width on mobile */
+      padding: 0 10px;
+    }
+  
+    .home-about-text h1 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+      margin-bottom: 15px;
+    }
+  
+    .home-about-text p {
+      font-size: 0.9rem; /* Adjust font size for readability */
+      margin-bottom: 8px;
+    }
+  }
+  
+  /* Very small devices (e.g., phones in portrait mode) */
+  @media (max-width: 480px) {
+    .home-about-text h1 {
+      font-size: 1.3rem; /* Further reduce font size */
+      margin-bottom: 10px;
+    }
+  
+    .home-about-text p {
+      font-size: 0.85rem; /* Further reduce font size */
+      margin-bottom: 6px;
+    }
+  }

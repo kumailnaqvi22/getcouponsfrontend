@@ -46,7 +46,7 @@ const CouponPage = () => {
 
       <div className="stores-list">
         {stores.length === 0 ? (
-          <p>No stores available.</p>
+          <p>Sores Loading...</p>
         ) : (
           stores.map((store) => (
             <div
