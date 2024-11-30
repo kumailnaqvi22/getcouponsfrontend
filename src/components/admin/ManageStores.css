@@ -1,0 +1,168 @@
+/* Base styles for the Manage Stores component */
+.manage-stores {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .manage-stores button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .manage-stores button:hover {
+    background-color: #0056b3;
+  }
+  
+  .manage-stores ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .manage-stores li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .manage-stores li span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .manage-stores li button {
+    background-color: #28a745;
+    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .manage-stores li button.delete {
+    background-color: #dc3545;
+  }
+  
+  .manage-stores li button:hover {
+    background-color: #218838;
+  }
+  
+  .manage-stores li button.delete:hover {
+    background-color: #c82333;
+  }
+  
+  /* Form styling */
+  .store-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  .store-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .store-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .store-form input,
+  .store-form textarea,
+  .store-form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .store-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .store-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .store-form button.cancel {
+    background-color: #6c757d;
+    margin-left: 10px;
+  }
+  
+  .store-form button.cancel:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .manage-stores li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .manage-stores li button {
+      margin: 10px 0 0 0;
+      width: 100%;
+    }
+  
+    .store-form {
+      width: 90%;
+    }
+  
+    .store-form h2 {
+      font-size: 20px;
+    }
+  
+    .store-form input,
+    .store-form textarea,
+    .store-form select {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .store-form button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .manage-stores button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    .store-form input,
+    .store-form textarea,
+    .store-form select {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    .store-form button {
+      font-size: 12px;
+      padding: 6px;
+    }
+  }

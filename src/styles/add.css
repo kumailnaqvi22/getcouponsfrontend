@@ -1,0 +1,65 @@
+/* Add Product Form */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form textarea,
+  form input[type="file"],
+  form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  form input[type="file"]::file-selector-button {
+    background-color: #007BFF; /* Matches footer button color */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  form input[type="file"]::file-selector-button:hover {
+    background-color: #0056b3; /* Matches footer button hover color */
+  }
+  
+  form button[type="submit"] {
+    background-color: #007BFF; /* Matches footer button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #0056b3; /* Matches footer button hover color */
+  }
+  
+  form input::placeholder,
+  form textarea::placeholder {
+    font-family: 'Times New Roman', Times, serif;
+  }

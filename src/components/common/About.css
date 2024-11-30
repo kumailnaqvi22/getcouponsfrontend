@@ -1,0 +1,100 @@
+/* About.css */
+
+/* General container styles */
+.about-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styles */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+.about-description,
+.about-purpose,
+.about-services,
+.about-mission,
+.about-vision,
+.about-commitment {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #34495e;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* List styling inside about-services */
+.about-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.about-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-size: 1.2rem;
+  top: 0;
+}
+
+/* Specific styles for each section */
+.about-title {
+  font-family: 'Arial', sans-serif;
+}
+
+.about-description {
+  font-family: 'Georgia', serif;
+}
+
+.about-purpose {
+  font-family: 'Arial', sans-serif;
+}
+
+.about-services {
+  font-family: 'Georgia', serif;
+}
+
+.about-mission,
+.about-vision,
+.about-commitment {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Adding responsive design for smaller screens */
+@media (max-width: 768px) {
+  .about-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-description,
+  .about-purpose,
+  .about-services,
+  .about-mission,
+  .about-vision,
+  .about-commitment {
+    font-size: 1rem;
+  }
+}

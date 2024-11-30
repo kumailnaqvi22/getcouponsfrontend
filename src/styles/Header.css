@@ -1,0 +1,185 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    font-size: 14px;
+    flex: 1;
+}
+
+.search-button {
+    background-color: #ff4500;
+    border: none;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.user-icons {
+    display: flex;
+    align-items: center;
+}
+
+.user-icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .profile-button,
+    .logout-button,
+     .login-button,
+     .signup-button{
+        display: none;
+    }
+
+    .nav-links.show-nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        gap: 30px;
+        font-size: larger;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background-color: #fff;
+        padding: 80px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hide the search bar on mobile devices */
+    .search-bar {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-toggle button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none;
+    }
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: auto;
+    position: relative; /* This ensures the suggestions are positioned relative to the search bar */
+}
+
+.suggestions-dropdown {
+    position: absolute; /* Position it outside the search input */
+    top: 100%; /* Align it directly below the input */
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000000; /* Ensure it appears above other content */
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:hover {
+    background: #f5f5f5;
+}
+
+.loading {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    font-size: 14px;
+    color: gray;
+}

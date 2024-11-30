@@ -1,0 +1,466 @@
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* Admin Dashboard Header */
+.admin-dashboard-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Admin Dashboard Buttons */
+.admin-dashboard-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.admin-dashboard-buttons button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.admin-dashboard-buttons button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.admin-dashboard-buttons button:active {
+  transform: translateY(0);
+}
+
+.admin-dashboard-buttons button svg {
+  margin-right: 5px;
+}
+
+/* Admin Dashboard Content */
+.admin-dashboard-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard-content > div {
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .admin-dashboard-buttons {
+    flex-wrap: wrap;
+  }
+  .admin-dashboard-buttons button {
+    margin: 5px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .admin-dashboard-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .admin-dashboard-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-dashboard-buttons button {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+  }
+
+  .admin-dashboard-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-dashboard-buttons button {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .admin-dashboard-content {
+    padding: 10px;
+  }
+}
+
+/* Specific Admin Dashboard Sections */
+.admin-orders,
+.admin-add-product,
+.admin-edit-product,
+.admin-manage-users,
+.admin-analytics,
+.admin-coupon,
+.admin-messages,
+.admin-categories {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.admin-orders h2,
+.admin-add-product h2,
+.admin-edit-product h2,
+.admin-manage-users h2,
+.admin-analytics h2,
+.admin-coupon h2,
+.admin-messages h2,
+.admin-categories h2 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Orders Section */
+.admin-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.admin-orders-table th,
+.admin-orders-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.admin-orders-table th {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Add Product Section */
+.admin-add-product-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-add-product-form input,
+.admin-add-product-form select,
+.admin-add-product-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.admin-add-product-form button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-add-product-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Edit Product Section */
+.admin-edit-product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.admin-edit-product-table th,
+.admin-edit-product-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.admin-edit-product-table th {
+  background-color: #007BFF;
+  color: white;
+}
+
+.admin-edit-product-actions button {
+  background-color: #007BFF;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-edit-product-actions button:hover {
+  background-color: #0056b3;
+}
+
+/* Manage Users Section */
+.admin-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.admin-users-table th,
+.admin-users-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.admin-users-table th {
+  background-color: #007BFF;
+  color: white;
+}
+
+.admin-users-actions button {
+  background-color: #007BFF;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-users-actions button:hover {
+  background-color: #0056b3;
+}
+
+/* Analytics Section */
+.admin-analytics-charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.admin-analytics-chart {
+  width: calc(50% - 20px);
+  margin: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .admin-analytics-chart {
+    width: 100%;
+  }
+}
+
+/* Coupon Section */
+.admin-coupon-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-coupon-form input,
+.admin-coupon-form select,
+.admin-coupon-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.admin-coupon-form button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-coupon-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Messages Section */
+.admin-messages-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-messages-list li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-messages-list li:hover {
+  background-color: #f1f1f1;
+}
+
+.admin-messages-list li h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.admin-messages-list li p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.admin-messages-list li button {
+  background-color: #007BFF;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-messages-list li button:hover {
+  background-color: #0056b3;
+}
+
+/* Categories Section */
+.admin-categories-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-categories-list li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-categories-list
+
+ li:hover {
+  background-color: #f1f1f1;
+}
+
+.admin-categories-list li h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.admin-categories-list li p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.admin-categories-list li button {
+  background-color: #007BFF;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-categories-list li button:hover {
+  background-color: #0056b3;
+}
+
+/* Pagination */
+.admin-pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.admin-pagination button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 3px;
+  transition: color 0.3s;
+}
+
+.admin-pagination button.active {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.admin-pagination button:hover:not(.active) {
+  color: #0056b3;
+}
+
+.admin-pagination button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}

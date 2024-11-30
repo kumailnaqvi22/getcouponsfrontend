@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .store-form {
+    background: #fff;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .store-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .store-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .store-form input,
+  .store-form textarea,
+  .store-form select,
+  .store-form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .store-form textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .store-form label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .store-form button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .store-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .store-form button[type="button"] {
+    background-color: #6c757d;
+  }
+  
+  .store-form button[type="button"]:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Coupons Section */
+  .coupon-item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+  }
+  
+  .coupon-details {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .coupon-details span {
+    display: block;
+  }
+  
+  .coupon-details .verified-badge,
+  .coupon-details .featured-badge {
+    background-color: #28a745;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .coupon-details .featured-badge {
+    background-color: #ffc107;
+  }
+  
+  .get-code-btn,
+  .remove-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-right: 5px;
+  }
+  
+  .get-code-btn {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .get-code-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .remove-btn {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Additional Store Details Section */
+  h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .new-coupon h4 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .store-form {
+      padding: 15px;
+    }
+  
+    .store-form h2 {
+      font-size: 20px;
+    }
+  
+    .store-form input,
+    .store-form textarea,
+    .store-form select,
+    .store-form button {
+      font-size: 12px;
+    }
+  
+    .coupon-details {
+      font-size: 12px;
+    }
+  
+    .get-code-btn,
+    .remove-btn {
+      padding: 4px 10px;
+      font-size: 10px;
+    }
+  }
+  

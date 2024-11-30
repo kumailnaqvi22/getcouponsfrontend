@@ -1,0 +1,34 @@
+.manage-coupons {
+    padding: 20px;
+  }
+  
+  .manage-coupons button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .manage-coupons ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .manage-coupons li {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .manage-coupons .action-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .manage-coupons .icon {
+    cursor: pointer;
+    font-size: 20px;
+  }
+  

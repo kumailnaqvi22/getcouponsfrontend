@@ -1,0 +1,365 @@
+/* General Page Styling */
+.store-detail-page {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  gap: 20px; /* Space between main content and sidebar */
+}
+
+/* Store Header */
+.store-header {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.store-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+.store-info {
+  flex-grow: 1;
+}
+
+/* Store Name Wrapper */
+.store-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.store-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.store-description {
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+/* Verified Badge Styling */
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2ecc71; /* Green color for Verified text */
+  background-color: #eafaf1; /* Light green background */
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.verified-badge svg {
+  font-size: 16px; /* Adjust size of the icon */
+}
+
+/* Coupons Section */
+.coupons-section {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.coupons-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.coupon-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.coupon-card-left {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+}
+
+.discount-tag {
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+}
+
+.coupon-card-middle {
+  flex-grow: 1;
+  padding: 0 15px;
+}
+
+.coupon-description {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 8px;
+}
+
+.coupon-expiry {
+  font-size: 12px;
+  color: #888;
+}
+
+.coupon-card-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+
+.get-code-svg {
+  cursor: pointer;
+  width: 200px; /* Adjust width */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.2s;
+}
+
+.get-code-svg:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Highlighted store name in header */
+.highlighted-text {
+  color: #ff532e;
+  font-weight: bold;
+}
+
+/* Highlighted "Code" in the coupon card */
+.highlighted-code {
+  color: #ff532e;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 8px; /* Space before SVG */
+  transition: transform 0.2s;
+}
+
+.highlighted-code:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.get-code-svg:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Free Sticker Image */
+.free-sticker {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 80px; /* Adjust width */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+/* Store Header Section */
+.store-header {
+  position: relative; /* Set relative positioning for the parent container */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar {
+  flex: 0 0 300px; /* Fixed width for sidebar */
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.sidebar h2,
+.sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.discount-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.discount-list li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.discount-list .icon {
+  color: #ff532e; /* Highlighted icon color */
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.promo-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.promo-info li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  color: #555;
+}
+
+.promo-info .icon {
+  color: #ff532e; /* Highlighted icon color */
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.additional-info {
+  margin-top: 20px;
+}
+
+.additional-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+.points-list {
+  list-style: disc inside;
+  margin: 15px 0 0;
+  padding: 0;
+}
+
+.points-list li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .store-detail-page {
+    flex-direction: column; /* Stack the content vertically */
+    padding: 10px;
+  }
+
+  .store-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .store-logo {
+    width: 60px; /* Smaller logo */
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .store-name-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .store-name {
+    font-size: 20px; /* Adjust store name font size */
+  }
+
+  .store-description {
+    font-size: 12px; /* Adjust description font size */
+  }
+
+  .verified-badge {
+    font-size: 12px; /* Adjust badge font size */
+    padding: 4px 8px;
+  }
+
+  .coupons-section {
+    padding: 10px;
+  }
+
+  .coupon-card {
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .coupon-card-left {
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .coupon-card-middle {
+    padding: 10px 0;
+  }
+
+  .coupon-card-right {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .get-code-svg {
+    width: 150px; /* Adjust width for smaller screens */
+  }
+
+  .sidebar {
+    flex: 0 0 100%; /* Make sidebar take full width on mobile */
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  .store-header {
+    gap: 10px;
+  }
+
+  .highlighted-text {
+    font-size: 18px; /* Adjust font size for mobile */
+  }
+
+  .highlighted-code {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  .free-sticker {
+    width: 60px; /* Smaller sticker */
+  }
+
+  .discount-list li {
+    font-size: 12px; /* Adjust list font size */
+  }
+
+  .promo-info li {
+    font-size: 12px; /* Adjust list font size */
+  }
+
+  .points-list li {
+    font-size: 12px; /* Adjust list font size */
+  }
+}

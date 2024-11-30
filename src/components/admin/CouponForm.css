@@ -1,0 +1,92 @@
+/* Container for the entire form */
+.coupon-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header of the form */
+  .coupon-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Input fields */
+  .coupon-form input,
+  .coupon-form textarea,
+  .coupon-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .coupon-form input[type="date"] {
+    padding-left: 10px;
+  }
+  
+  .coupon-form input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+  }
+  
+  .coupon-form textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .coupon-form select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  /* Button styling */
+  .coupon-form button {
+    padding: 12px 20px;
+    margin: 10px 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .coupon-form button[type="button"] {
+    background-color: #ccc;
+  }
+  
+  .coupon-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .coupon-form button[type="button"]:hover {
+    background-color: #999;
+  }
+  
+  /* Form container responsiveness */
+  @media (max-width: 600px) {
+    .coupon-form {
+      padding: 15px;
+    }
+  
+    .coupon-form input,
+    .coupon-form textarea,
+    .coupon-form select {
+      font-size: 16px;
+    }
+  
+    .coupon-form button {
+      width: 100%;
+    }
+  }
+  

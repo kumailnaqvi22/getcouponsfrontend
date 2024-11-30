@@ -1,0 +1,25 @@
+/* Messages.css */
+.messages {
+    padding: 20px;
+  }
+  
+  .messages h2 {
+    margin-bottom: 20px;
+  }
+  
+  .messages ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .messages li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .messages li p {
+    margin: 5px 0;
+  }
+  

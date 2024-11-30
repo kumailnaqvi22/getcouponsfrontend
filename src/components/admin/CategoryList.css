@@ -1,0 +1,40 @@
+.category-list {
+    margin: 20px;
+  }
+  
+  .category-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .category-list th, .category-list td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .category-list th {
+    background-color: #f4f4f4;
+  }
+  
+  .category-list td button {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .category-list td button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .category-list td a {
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  .category-list td a:hover {
+    text-decoration: underline;
+  }
+  

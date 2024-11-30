@@ -1,0 +1,150 @@
+.manage-users {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.manage-users h1 {
+    text-align: center;
+    color: #333;
+}
+
+.manage-users ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.manage-users li {
+    padding: 12px 18px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #666;
+    font-size: 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.manage-users li:hover {
+    background-color: #e0e0e0;
+}
+
+.manage-users li:focus,
+.manage-users li:active {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.manage-users li:active {
+    transform: scale(0.98);
+}
+
+.manage-users .dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #eef5ff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.manage-users .dropdown button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 6px 0;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.manage-users .dropdown button:first-child {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.manage-users .dropdown button:last-child {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.manage-users .dropdown button:hover {
+    opacity: 0.85;
+}
+
+.manage-users .dropdown button:active {
+    transform: scale(0.98);
+}
+
+.manage-users .dropdown button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.manage-users .dropdown button:disabled {
+    background-color: #999;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .manage-users {
+        padding: 15px;
+    }
+
+    .manage-users h1 {
+        font-size: 24px;
+    }
+
+    .manage-users li {
+        padding: 8px 12px;
+    }
+
+    .manage-users .dropdown {
+        padding: 8px;
+    }
+
+    .manage-users .dropdown button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .manage-users {
+        padding: 10px;
+    }
+
+    .manage-users h1 {
+        font-size: 22px;
+    }
+
+    .manage-users li {
+        padding: 6px 10px;
+    }
+
+    .manage-users .dropdown {
+        padding: 6px;
+    }
+
+    .manage-users .dropdown button {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+/* Scoped Placeholder Styles */
+.manage-users input::placeholder {
+    color: #bbb;
+    font-size: 14px;
+}

@@ -1,0 +1,28 @@
+/* src/components/common/Message.css */
+
+.message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.message.info {
+    background-color: #e7f3fe;
+    color: #3178c6;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.message.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
