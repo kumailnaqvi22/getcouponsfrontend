@@ -1,0 +1,41 @@
+.coupon-card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .store-logo {
+    max-width: 40px;
+    margin-top: 5px;
+  }
+  
+  .coupon-card-middle .see-all-coupons-link {
+    color: #6a0dad;
+    font-size: 0.9em;
+    margin-top: 10px; cursor: pointer; text-decoration: underline; }
+
+    .coupon-card-middle .see-all-coupons-link:hover { color: #3e008a; }
+
+    .coupons-header {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      .coupons-header h1 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      
+      .coupons-header p {
+        font-size: 16px;
+        color: #555;
+      }
+      
+  

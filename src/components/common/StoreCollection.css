@@ -1,0 +1,47 @@
+.store-collection-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    width: 90%;
+    margin: 20px auto;
+  }
+  
+  .header {
+    background-color: #4a4a8c;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .store-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  
+  .header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .store-grid {
+    padding: 15px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  
+  .store-item {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+  }
+  

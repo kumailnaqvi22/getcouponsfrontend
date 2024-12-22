@@ -1,119 +1,127 @@
 .trending-coupons {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .trending-slider {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    overflow: hidden;
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+.trending-slider {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.trending-card {
+  flex: 1;
+  max-width: 30%;
+  height: 400px;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.trending-card:hover {
+  transform: scale(1.05);
+}
+
+.card-background {
+  width: 100%;
+  height: 70%;
+  background-size: contain; /* Ensure the entire image fits inside the box */
+  background-repeat: no-repeat; /* Prevent tiling of the image */
+  background-position: center; /* Center the image inside the box */
+  position: relative;
+  transition: filter 0.3s ease;
+}
+
+/* Floating sub-card */
+.sub-card {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.store-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.logoline {
+  width: 4px;
+  height: 80%;
+  background-color: black;
+  margin: 0 10px;
+}
+
+.store-info {
+  text-align: left;
+  flex: 1;
+}
+
+.store-info h3 {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.store-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Orange line under description */
+.store-info p::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #ff6600; 
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
   .trending-card {
-    flex: 1;
-    max-width: 30%;
-    height: 300px;
-    cursor: pointer;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative; /* Ensure proper positioning for the sub-card */
+    max-width: 90%;
+    margin: 0 auto;
   }
-  
-  .trending-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-background {
-    width: 100%;
-    height: 100%;
-    background-size: contain; /* Cover the entire card area */
-    background-repeat: no-repeat; /* Prevent repetition of the image */
-    background-position: center; /* Center the image */
-    position: relative;
-    filter: brightness(90%); /* Slight darkening for better contrast with text */
-    transition: filter 0.3s ease, transform 0.3s ease;
-  }
-  
-  .card-background:hover {
-    filter: brightness(100%); /* Restore original brightness on hover */
-    transform: scale(1.02); /* Subtle zoom effect for visual appeal */
-  }
-  
-  .sub-card {
-    position: absolute;
-    bottom: 0;
-    background: white;
-    width: 100%;
-    height: 30%;
-    padding: 10px;
-    display: flex;
-    align-items: center; /* Align items vertically */
-    gap: 15px; /* Space between logo and text */
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-  
+
   .store-logo {
-    width: 60px; /* Adjust size for visibility */
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff; /* Add a border for better distinction */
+    width: 50px;
+    height: 50px;
   }
-  
-  .store-info {
-    flex: 1; /* Take remaining space */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center text vertically */
-    text-align: left; /* Align text to the left */
+
+  .sub-card {
+    bottom: -15px;
+    left: 15px;
+    right: 15px;
+    padding: 10px;
   }
-  
+
   .store-info h3 {
-    font-size: 16px;
-    margin: 0;
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
-    font-weight: bold; /* Make the title stand out */
+    font-size: 14px;
   }
-  
+
   .store-info p {
     font-size: 12px;
-    margin: 0;
-    color: #666;
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
   }
-  
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .trending-card {
-      max-width: 90%; /* Only one card takes the full width on small screens */
-      margin: 0 auto; /* Center the card */
-    }
-  
-    .sub-card {
-      height: 35%; /* Increase height slightly for smaller screens */
-    }
-  
-    .store-logo {
-      width: 50px; /* Smaller logo for mobile */
-      height: 50px;
-    }
-  
-    .store-info h3 {
-      font-size: 14px;
-    }
-  
-    .store-info p {
-      font-size: 10px;
-    }
+
+  .store-info p::after {
+    width: 40px;
   }
+}

@@ -55,7 +55,6 @@ const ShopPage = () => {
   const handleStoreClick = (store) => {
     navigate(`/store/${store._id}`);
   };
-  
 
   const toggleVisibility = (letter) => {
     setVisibleStores((prevVisible) => ({
@@ -67,50 +66,50 @@ const ShopPage = () => {
   const groupedStores = organizeStores();
 
   return (
-    <div className="shop-page">
+    <div className="shop-page-container">
       <h1>All Stores</h1>
 
-      <div className="alphabet-filter">
+      <div className="shop-page-alphabet-filter">
         {alphabet.map((letter) => (
           <button
             key={letter}
             onClick={() => handleLetterClick(letter)}
-            className={`filter-button ${selectedLetter === letter ? "active" : ""}`}
+            className={`shop-page-filter-button ${selectedLetter === letter ? "shop-page-active" : ""}`}
           >
             {letter}
           </button>
         ))}
         <button
           onClick={() => handleLetterClick("all")}
-          className={`filter-button ${selectedLetter === "all" ? "active" : ""}`}
+          className={`shop-page-filter-button ${selectedLetter === "all" ? "shop-page-active" : ""}`}
         >
           All
         </button>
       </div>
 
-      <div className="stores-list">
+      <div className="shop-page-stores-list">
         {Object.keys(groupedStores).sort().map((letter) => (
-          <div key={letter} className="store-group">
-            <h2>{letter}</h2>
-            {groupedStores[letter].slice(0, visibleStores[letter] ? undefined : MAX_VISIBLE).map((store) => (
-              <div
-                key={store._id}
-                className="store-card"
-                onClick={() => handleStoreClick(store)}
-              >
-                <div className="store-info">
-                  <h3 className="store-name">{store.name}</h3>
+          <div key={letter} className="shop-page-store-group">
+            <div className="shop-page-letter-block">{letter}</div>
+            <div className="shop-page-stores-block">
+              {groupedStores[letter].slice(0, visibleStores[letter] ? undefined : MAX_VISIBLE).map((store) => (
+                <div
+                  key={store._id}
+                  className="shop-page-store-card"
+                  onClick={() => handleStoreClick(store)}
+                >
+                  {store.name}
                 </div>
-              </div>
-            ))}
-            {groupedStores[letter].length > MAX_VISIBLE && (
-              <button
-                onClick={() => toggleVisibility(letter)}
-                className="see-more-button"
-              >
-                {visibleStores[letter] ? "See Less" : "See More"}
-              </button>
-            )}
+              ))}
+              {groupedStores[letter].length > MAX_VISIBLE && (
+                <button
+                  onClick={() => toggleVisibility(letter)}
+                  className="shop-page-see-more-button"
+                >
+                  {visibleStores[letter] ? "See Less" : "Show More"}
+                </button>
+              )}
+            </div>
           </div>
         ))}
       </div>

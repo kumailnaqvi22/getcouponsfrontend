@@ -37,18 +37,21 @@ const TrendingCoupons = () => {
   }, []);
 
   useEffect(() => {
-    // Determine the slide interval based on screen size
+    if (trendingStores.length === 0) return; // Guard for empty stores
+
+    const slidesToShow = window.innerWidth < 768 ? 1 : 3;
+
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        (prevIndex + (window.innerWidth < 768 ? 1 : 3)) % trendingStores.length
+        (prevIndex + slidesToShow) % trendingStores.length
       );
-    }, 3000); // Rotate every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, [trendingStores]);
 
   const handleStoreClick = (storeId) => {
-    navigate(`/store/${storeId}`); // Navigate to the same route as in CouponPage
+    navigate(`/store/${storeId}`);
   };
 
   if (loading) {
@@ -59,17 +62,14 @@ const TrendingCoupons = () => {
     return <div className="error-message">{error}</div>;
   }
 
-  // Determine how many cards to show based on screen size
   const slidesToShow = window.innerWidth < 768 ? 1 : 3;
 
-  // Get the current set of stores to display
   const displayedStores = trendingStores.slice(
     currentIndex,
     currentIndex + slidesToShow
   );
 
   if (displayedStores.length < slidesToShow) {
-    // Append additional stores from the start to complete the slide
     const additionalStores = trendingStores.slice(
       0,
       slidesToShow - displayedStores.length
@@ -79,32 +79,31 @@ const TrendingCoupons = () => {
 
   return (
     <div className="trending-coupons">
-      <h2>Shop Today's Trending Coupons at Coupons Worth</h2>
+      <h2>Shop Today's Trending Coupons at Get Coupons</h2>
       <div className="trending-slider">
         {displayedStores.map((store, index) => (
           <div
             key={index}
             className="trending-card"
-            onClick={() => handleStoreClick(store._id)} // Use store._id for internal navigation
+            onClick={() => handleStoreClick(store._id)}
             aria-label={`View coupons for ${store.name}`}
           >
-            {/* Background image */}
             <div
               className="card-background"
               style={{
                 backgroundImage: `url(${store.logo || "/default-bg.jpg"})`,
               }}
             >
-              {/* Sub-card with logo and description */}
               <div className="sub-card">
                 <img
                   src={store.logo || "/default-logo.png"}
-                  alt={`${store.name} logo`}
+                  alt={`${store.name || "Store"} logo`}
                   className="store-logo"
                 />
+                <div className="logoline"></div>
                 <div className="store-info">
-                  <h3>{store.name}</h3>
                   <p>{store.description || "Find the best deals and offers!"}</p>
+                  <h3>{store.name || "Unnamed Store"}</h3>
                 </div>
               </div>
             </div>

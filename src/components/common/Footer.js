@@ -40,13 +40,13 @@ const Footer = () => {
 
         <div className="footer-section">
           <h3>Contact</h3>
-          <p>Email: couponsworth@gmail.com</p>
+          <p>Email: kumailnaqvi573@gmail.com</p>
           {/* <p>Phone: +1 (123) 456-7890</p> */}
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2024 Coupons Worth. All rights reserved.</p>
+        <p>&copy; 2024 Get Coupons. All rights reserved.</p>
       </div>
     </footer>
   );

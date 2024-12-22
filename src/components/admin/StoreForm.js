@@ -8,9 +8,10 @@ const StoreForm = ({ store, onClose }) => {
     name: store?.name || "",
     logo: store?.logo || "",
     url: store?.url || "",
-    subdomain: store?.subdomain || "", // New field for subdomain
+    // subdomain: store?.subdomain || "", // New field for subdomain
     description: store?.description || "",
     category: store?.category || "",
+    // categoryIcon: store?.categoryIcon || "", // New field for category icon URL
     tags: store?.tags?.join(", ") || "",
     status: store?.status || "Active",
     coupons: store?.coupons || [],
@@ -206,6 +207,7 @@ const StoreForm = ({ store, onClose }) => {
           onChange={handleChange}
           placeholder="Category"
         />
+        
         <input
           type="text"
           name="tags"

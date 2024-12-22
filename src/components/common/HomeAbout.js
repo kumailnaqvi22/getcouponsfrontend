@@ -15,11 +15,11 @@ const HomeAbout = () => {
 
         {/* Text Section */}
         <div className="home-about-text">
-          <h1>Couponsworth.com is your source for discount codes and source of inspiration</h1>
+          <h1>Get Coupons is your source for discount codes and source of inspiration</h1>
           <p>
-            Welcome to couponsworth.com! Our mission is to reduce your shopping costs for online shopping. 
+            Welcome to Get Coupons! Our mission is to reduce your shopping costs for online shopping. 
             We organize our promotional events according to the promotions of more than 20,000 online stores we work with. 
-            You'll find the latest deals from across the web each month at couponsworth.com. Whether you're looking for kitchenware, 
+            You'll find the latest deals from across the web each month at Get Coupons. Whether you're looking for kitchenware, 
             electronics, hardware equipment, apparel; from student discounts to free shipping promotions, to holiday sales, 
             we have all your needs covered. A wide selection of 2024 top-brand coupons and discount codes are waiting for you here, 
             and you won't be able to resist!

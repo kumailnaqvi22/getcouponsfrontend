@@ -5,6 +5,9 @@ import CouponPage from "./CouponPage";
 import HeroSuggestions from "./heroSuggestion";
 import HomeAbout from "./HomeAbout";
 import TrendingCoupons from "../common/TrendingCoupons"; 
+import LatestCoupons from "../common/LatestCoupons"; 
+import TrendingStores from "../common/TrendingStores"; 
+import StoreCollection from "../common/StoreCollection"; 
 
 const Home = () => {
   const [stores, setStores] = useState([]);
@@ -63,7 +66,7 @@ const Home = () => {
             <h1>THE BEST COUPONS and DISCOUNTS ONLINE</h1>
           </div>
           <div className="search-section">
-            <div className="search-bar">
+            <div className="search-bar2">
               <input
                 type="text"
                 className="search-input"
@@ -87,7 +90,7 @@ const Home = () => {
         </div>
         <div className="image-section">
           <img
-            src="https://img.freepik.com/free-photo/simple-illustration-word-sale-red-white_181624-23441.jpg"
+            src="https://i.ibb.co/f8VxwWz/image.png"
             alt="Right Side"
             className="sale-image"
           />
@@ -96,6 +99,9 @@ const Home = () => {
       {/* Add TrendingCoupons here */}
       <TrendingCoupons />
       <CouponPage />
+      <LatestCoupons />
+      <TrendingStores />
+      <StoreCollection />
       <HomeAbout />
     </>
   );

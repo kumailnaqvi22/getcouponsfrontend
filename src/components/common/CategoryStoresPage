@@ -1,0 +1,44 @@
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+const CategoryStoresPage = () => {
+  const { category } = useParams();
+  const [stores, setStores] = useState([]);
+
+  useEffect(() => {
+    // Fetch stores by category
+    const fetchStoresByCategory = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.REACT_APP_API_BASE_URL}/api/stores?category=${category}`
+        );
+        const data = await response.json();
+        if (response.ok) {
+          setStores(data.stores);
+        } else {
+          console.error("Failed to fetch stores:", data.message);
+        }
+      } catch (error) {
+        console.error("Error fetching stores:", error);
+      }
+    };
+
+    fetchStoresByCategory();
+  }, [category]);
+
+  return (
+    <div>
+      <h1>Stores in {category}</h1>
+      <div>
+        {stores.map((store) => (
+          <div key={store._id}>
+            <h2>{store.name}</h2>
+            <p>{store.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CategoryStoresPage;

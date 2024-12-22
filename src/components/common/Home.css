@@ -30,7 +30,7 @@
     margin-top: 10px;
 }
 
-.search-bar {
+.search-bar2 {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
@@ -95,5 +95,9 @@
 
     .sale-image {
         max-width: 100%;
+    }
+
+    .search-bar2{
+        display: none;
     }
 }

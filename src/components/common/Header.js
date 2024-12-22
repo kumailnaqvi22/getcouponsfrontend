@@ -105,24 +105,25 @@ const Header = () => {
         <nav>
           <Link to="/" className="logo">
             <img
-              src="https://i.ibb.co/bg34g8K/Whats-App-Image-2024-11-20-at-4-29-28-PM.jpg"
+              src="https://i.ibb.co/bK5nHSP/Whats-App-Image-2024-12-22-at-11-10-10-AM-removebg-preview.png"
               alt="Logo"
               className="header-logo"
             />
           </Link>
 
           <ul className={`nav-links ${isNavOpen ? "show-nav" : ""}`}>
-            {["shop", "coupon", "categories", "about", "contact"].map((route) => (
-              <li key={route}>
-                <Link
-                  to={`/${route}`}
-                  className={location.pathname === `/${route}` ? "active-link" : ""}
-                  onClick={() => setIsNavOpen(false)}
-                >
-                  {route.charAt(0).toUpperCase() + route.slice(1)}
-                </Link>
-              </li>
-            ))}
+          {["shop", "coupon", "categories", "about", "contact"].map((route) => (
+  <li key={route}>
+    <Link
+      to={`/${route}`}
+      className={location.pathname === `/${route}` ? "active-link" : ""}
+      onClick={() => setIsNavOpen(false)}
+    >
+      {route.charAt(0).toUpperCase() + route.slice(1)}
+    </Link>
+  </li>
+))}
+
           </ul>
 
           <div className="search-bar">
